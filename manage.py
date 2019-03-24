@@ -24,7 +24,7 @@ def r():
     return requests.get(host).content
 
 
-@app.route('/<s1>', methods=["GET", ])
+@app.route('/<s1>/', methods=["GET", ])
 def r1(s1):
     target = host + "/%s" % (s1,)
     if judge(s1):
@@ -32,7 +32,7 @@ def r1(s1):
     return requests.get(target).content
 
 
-@app.route('/<s1>/<s2>', methods=["GET", ])
+@app.route('/<s1>/<s2>/', methods=["GET", ])
 def r2(s1, s2):
     target = host + "/%s/%s" % (s1, s2)
     if judge(s2):
@@ -40,7 +40,7 @@ def r2(s1, s2):
     return requests.get(target).content
 
 
-@app.route('/<s1>/<s2>/<s3>', methods=["GET", ])
+@app.route('/<s1>/<s2>/<s3>/', methods=["GET", ])
 def r3(s1, s2, s3):
     target = host + "/%s/%s/%s" % (s1, s2, s3)
     if judge(s3):
@@ -48,7 +48,7 @@ def r3(s1, s2, s3):
     return requests.get(target).content
 
 
-@app.route('/<s1>/<s2>/<s3>/<s4>', methods=["GET", ])
+@app.route('/<s1>/<s2>/<s3>/<s4>/', methods=["GET", ])
 def r4(s1, s2, s3, s4):
     target = host + "/%s/%s/%s/%s" % (s1, s2, s3, s4)
     if judge(s4):
@@ -56,7 +56,7 @@ def r4(s1, s2, s3, s4):
     return requests.get(target).content
 
 
-@app.route('/<s1>/<s2>/<s3>/<s4>/<s5>', methods=["GET", ])
+@app.route('/<s1>/<s2>/<s3>/<s4>/<s5>/', methods=["GET", ])
 def r5(s1, s2, s3, s4, s5):
     target = host + "/%s/%s/%s/%s/%s" % (s1, s2, s3, s4, s5)
     if judge(s5):
@@ -64,7 +64,7 @@ def r5(s1, s2, s3, s4, s5):
     return requests.get(target).content
 
 
-@app.route('/<s1>/<s2>/<s3>/<s4>/<s5>/<s6>', methods=["GET", ])
+@app.route('/<s1>/<s2>/<s3>/<s4>/<s5>/<s6>/', methods=["GET", ])
 def r6(s1, s2, s3, s4, s5, s6):
     target = host + "/%s/%s/%s/%s/%s/%s" % (s1, s2, s3, s4, s5, s6)
     if judge(s6):
@@ -73,5 +73,5 @@ def r6(s1, s2, s3, s4, s5, s6):
 
 
 if __name__ == '__main__':
-    app.run("0.0.0.0", port=int(os.environ.get('PORT', '5000')), debug=False)
+    app.run("0.0.0.0", port=int(os.environ.get('PORT', '80')), debug=False)
 
